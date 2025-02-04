@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="shortcut icon" href="../dienvi.png" type="image/x-icon">
+
+		<title>Cámara siguiendo un path</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><h1>Cámara siguiendo un path</h1></section>
+				<section>Add Curve >> Circle</section>
+				<section>S escalamos</section>
+				<section>Seleccionamos la Cámera </section>
+				<section>Usamos Object Constrains</section>
+				<section>Follow Path</section>
+				<section>Target seleccionamos la curva</section>
+				<section>Probablemente la cámara se mueva de su lugar</section>
+				<section>Se soluciona en Object >> Clear Location</section>
+				<section>Para animarlo usamos Follow Path >> Animate Path</section>
+				<section>Agregamos otro Constrain</section>
+				<section>Track to</section>
+				<section>Target seleccionamos el cubo</section>
+				<section>Para controlar la velocidad del trayecto nos vamos  a Object Data Properties, buscamos Path Animation y cambiamos el valor de los frames</section>
+				<section>Finalizamos</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
