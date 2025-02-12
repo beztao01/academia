@@ -20,7 +20,6 @@ header{
     height: 200px;
 }
 
-
 nav{
     width: 150px;
     background-color: #c1c1c1;
@@ -58,7 +57,6 @@ main section ul li{
     color: #073763;
 } 
 
-
 main section ul{
     margin: 0px;
     padding: 0px; 
@@ -90,8 +88,6 @@ footer{
     background-color:#073763;
     color: #f3f6f4;
 }
-
-
 
 .logo{
     margin: 10px;
