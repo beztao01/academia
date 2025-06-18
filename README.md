@@ -1,1 +1,1 @@
-Coleccion de sitios académicos.
+Colección de sitios académicos.
