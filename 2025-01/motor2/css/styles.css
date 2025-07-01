@@ -99,8 +99,8 @@ image{
     margin: 10px;
 }
 
-@media screen and (max-width: 500px) {nav{
+@media screen and (max-width: 500px) {
+    nav{
     display: none;
     }
-    
 }
