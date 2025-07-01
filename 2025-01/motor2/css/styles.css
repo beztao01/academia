@@ -101,6 +101,6 @@ image{
 
 @media screen and (max-width: 500px) {nav{
     display: none;
-}
+    }
     
 }
