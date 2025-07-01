@@ -91,7 +91,11 @@ footer{
     color: #f3f6f4;
 }
 
-
+image{
+    align-items: center;
+    height: 80%
+}
+    
 
 .logo{
     margin: 10px;
