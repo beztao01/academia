@@ -90,10 +90,14 @@ footer{
     color: #f3f6f4;
 }
 
-img{
-    width: 80%;
-}
+
     
+.img-fluid{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .logo{
     margin: 10px;
