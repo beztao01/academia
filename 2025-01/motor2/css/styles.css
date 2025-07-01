@@ -90,6 +90,12 @@ footer{
     color: #f3f6f4;
 }
 
+aside{
+    width: 150px;
+    background-color: #c1c1c1;
+    color: #f3f6f4;
+    text-align: left;
+}
 
     
 .img-fluid{
