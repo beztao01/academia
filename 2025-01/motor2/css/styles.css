@@ -107,4 +107,9 @@ footer{
     nav{
     display: none;
     }
+    
+    .img-fluid{
+        width: 100%;
+    }
+    
 }
