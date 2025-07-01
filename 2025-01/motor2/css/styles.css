@@ -94,6 +94,7 @@ footer{
     
 .img-fluid{
     text-align: center;
+    margin: auto;
     width: 80%;
     display: flex;
     justify-content: center;
