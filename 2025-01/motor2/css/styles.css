@@ -81,8 +81,7 @@ a{
     text-decoration: none;
 }
 section{
-
-border: 1px, solid, #999;
+    border: 1px, solid, #999;
 }
 
 footer{
@@ -91,14 +90,35 @@ footer{
     color: #f3f6f4;
 }
 
+aside{
+    padding: 20px;
+    width: 300px;
+    background-color: DeepSkyBlue;
+    color: #f3f6f4;
+    text-align: left;
+}
 
+    
+.img-fluid{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .logo{
     margin: 10px;
 }
 
-@media screen and (max-width: 500px) {nav{
+@media screen and (max-width: 500px) {
+    nav{
     display: none;
-}
+    }
+
+    .img-fluid{
+        width: 100%;
+    }
     
 }
