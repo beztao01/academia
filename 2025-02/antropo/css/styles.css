@@ -1,10 +1,12 @@
+
 /*selector universal*/
 *{
     margin: 0;
 }
 
 body{
-    background-color:#f3f6f4;
+    background-color:#073763;
+    //background-color:#f3f6f4;
 font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -20,10 +22,9 @@ header{
     height: 200px;
 }
 
-
 nav{
     width: 150px;
-    background-color: #c1c1c1;
+    background-color: #032b51;
     color: #f3f6f4;
     text-align: left;
 }
@@ -38,7 +39,8 @@ h2{
 
 h3{
     padding: 10px;
-    color: #073763
+    color: #f3f6f4;
+    color: 
 }
 
 h4{
@@ -70,14 +72,16 @@ li{
     list-style: none;
     text-decoration: none;
     text-align: center;
-    color: #f3f6f4;
+    color: #f3f6f4
 }
 
 p{
+    color:#f3f6f4 ;
     padding: 10px; 
 }
 
 a{
+    color:#f3f6f4 ;
     text-decoration: none;
 }
 section{
