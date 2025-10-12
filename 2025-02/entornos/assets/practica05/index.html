@@ -17,24 +17,55 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Ejercicio 05</section>
+				<section>
+					<h2>Ejercicio 05</h2>
+				<p>Objetivo: lograr que podamos navegar alrededor del cubo </p>
+				</section>
 				<section>Copiamos el ejercicio 04 o lo descargamos de <a href="https://myuvmedu.sharepoint.com/:u:/s/Section_N225L685202580546/EcW2tsaKB4VOvYEdUjPR1w8Be9x-8lUM548rM-6GBEPs_g?e=m4D6jx" target="_blank" rel="noopener noreferrer">Aquí.</a></section>
-				<section>Seleccionamos el idioma: Español.</section>
-				<section>El asistente te va llevando de la mano, le damos a siguiente. </section>
-				<section>Aceptamos la licencia.</section>
-				<section>Le damos click a la opción de nueva instalación.</section>
-				<section>Seleccionamos Portable - Instalar en un dispositivo portable.</section>
-				<section>Seleccionamos nuestra USB </section>
-				<section>Confirmamos la Unidad y le damos en siguiente.</section>
-				<section>Le damos terminar</section>
-				<section>En la parte inferior del lado derecho nos debe aparecer un icono, le damos doble click.</section>
-				<section>Nos aparece una ventana, buscamos el botón aplicaciones. </section>
-				<section>Obtener más aplicaciones,</section>
-				<section>Buscamos por categoría.</section>
-				<section>En Gráficos y Fotografías localizamos Blender LTS ATENCIÓN esta es la versión 3.6</section>
-				<section>Le damos click para que proceda la Descarga e Instalación. </section>
-				<section>Aparecerá en la ventana una carpeta que dice Gráficos y Fotografías.</section>
-				<section>Y ya tendremos Blender</section>
+				<section>En VSC nuestro archivo main.js de debe ver así</section>
+				<section>
+					<picture>
+						<img src="./assets/code01.png" alt="" srcset="">
+					</picture> 
+				</section>
+				<section>
+					Vamos a checar si esta la clase OrbitControlers con un console.log
+					<picture>
+						<img src="./assets/code02.png" alt="" srcset="">
+					</picture>
+				</section>
+				
+
+				<section>
+					Si vemos la consola del explorador nos va arrojar el siguiente error:
+					<picture>
+						<img src="./assets/error01.png" alt="" srcset="">
+					</picture>
+
+				</section>
+				<section>
+					Tenemos que agregar la librería desde la siguiente ruta:
+					<picture>
+						<img src="./assets/code03.png" alt="" srcset="">
+					</picture><br>
+					y revisamos desde el explorador.
+				</section>
+				<section>
+					Creamos una constante llamada controls 
+					<picture>
+						<img src="./assets/code04.png" alt="" srcset="">
+					</picture><br>
+				</section>
+				<section>
+					Debajo de la posición de la cámara, agregamos la línea que nos va a permitir actulizar la constante controls
+					<picture>
+						<img src="./assets/code06.png" alt="" srcset="">
+					</picture><br>
+				</section>
+				<section>
+					Ya debemos poder rotar alrededor del objeto con el mouse
+				</section>
+
 			</div>
 		</div>
 
