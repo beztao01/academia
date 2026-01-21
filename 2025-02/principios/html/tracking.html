@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Motion tracking</title>
+  <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+  
+  <header>
+      <h1>Licenciatura en Multimedia Digital</h1>
+      <h2>Motion Tracking</h2>
+  </header>
+  <div class="grid-container">
+        <nav>
+          <ul>
+                      <li><a href="#post-01"><b>Introducción</b></a></li>
+                      <li><a href="#post-02">Vistas</a></li>
+                      <li><a href="#post-03">Calibración de la lente</a></li>
+                      <li><a href="#post-04">Resolucion del movimiento de cámaras y objetos</a></li>
+                      <li><a href="#post-05">Herramientas para la orientación y estabilización de la escena</a></li>
+                      <!--
+                      <li><a href="#post-06"><b>Vista de Clip</b></a></li>
+                      <li><a href="#post-07">Introducción</a></li>
+                      <li><a href="#post-08">Marcado de rastreo</a></li>
+                      <li><a href="#post-09">Barra de herramientas</a></li>
+                      <li><a href="#post-10">Selección</a></li>
+                      <li><a href="#post-11">Edición</a></li>
+                      <li><a href="#post-12">Barra lateral</a></li>
+                      <li><a href="#post-13"><b>Vista de gráfica</b></a></li>
+                      <li><a href="#post-14">Introducción</a></li>
+                      <li><a href="#post-15">Encabezado</a></li>
+                      <li><a href="#post-17">Uso</a></li>
+                      <li><a href="#post-16"><b>Vista de planilla de tiempos</b></a></li>
+                      <li><a href="#post-18">Encabezado</a></li>
+                      <li><a href="#post-19">Uso</a></li>
+                      -->
+          </ul>
+        </nav>
+            <!--Contenido-->
+            <main>
+              <section id="post-01">
+                <h3><b>Introducción</b></h3>
+                <p>
+                  El rastreo de movimiento podrá ser usado para rastrear el movimiento de objetos y/o la cámara para, mediante restricciones, aplicar esos datos de rastreo a objetos 3D creados en Blender o importados al programa. El rastreador de movimiento de Blender soporta algunas herramientas muy potentes para el rastreo 2D y la reconstrucción de movimiento 3D, incluyendo el rastreo de cámara y de objetos, como también características especiales como el rastreo plano, utilizado en composición. Los rastros también podrán ser usados para mover o deformar máscaras, para trabajos de rotoscopía, en el modo Máscara disponible en el Editor de clips.
+                </p>
+                  
+                  </ul>
+              </section>
+              <section id="post-02">
+                <h3>Vistas </h3>
+                <p>
+                  En el modo de seguimiento hay tres vistas diferentes disponibles. Puede alternar entre los modos de vista mediante el selector de vista, que se encuentra en el encabezado. Cuando selecciona una vista, toda el área del editor de clips de película cambiará. Por lo tanto, para mostrar una vista de curva o de hoja de cálculo, el editor debe dividirse en dos, y uno debe cambiarse a la vista de curva o de hoja de cálculo.
+                </p>     
+                
+              </section>
+              <section id="post-03">
+                <h3>Calibración de la lente</h3>
+                  <p>
+                    Todas las cámaras graban videos distorsionados. No se puede hacer nada al respecto debido a la forma en que funcionan las lentes ópticas. Para un movimiento preciso de la cámara, se necesita el valor exacto de la distancia focal y la «fuerza» de la distorsión. <br><br>
+
+                    Actualmente, la distancia focal se puede obtener automáticamente solo a partir de la configuración de la cámara o de la información EXIF. Hay algunas herramientas externas que pueden ayudar a encontrar valores aproximados para compensar la distorsión. También hay herramientas completamente manuales donde puedes usar una cuadrícula que se ve afectada por el modelo de distorsión y las celdas deformadas definen líneas rectas en el metraje.<br><br>
+
+                    Dentro de Blender puedes usar la herramienta Anotación para esto: solo dibuja una línea que debe ser recta en el metraje usando un pincel de línea poligonal y ajusta los valores de distorsión para que las anotaciones coincidan con las líneas del metraje. <br><br>
+
+                    Para calibrar tu cámara con mayor precisión, usa la herramienta de calibración de cuadrícula de OpenCV. OpenCV usa el mismo modelo de distorsión, por lo que no debería ser un problema. <br>
+
+                  </p>                     
+              </section>
+              <section id="post-04">
+              <h3>Resolucion del movimiento de cámaras y objetos</h3>
+              <p>
+                Blender no solo permite resolver el movimiento de la cámara, incluidas las tomas con trípode, sino también el movimiento de los objetos en relación con el movimiento de la cámara. Además, existe Plane Track, que resuelve el movimiento de todos los marcadores en un plano.
+              </p>        
+              </section>
+
+              <section id="post-05">
+              <h3>Herramientas para la orientación y estabilización de la escena</h3>
+               <p>
+                Después de la resolución, es necesario orientar la escena real en la escena 3D para que la composición sea más cómoda. Existen herramientas para definir el suelo, el origen de la escena y los ejes X/Y para realizar la orientación de la escena. <br>   <br>
+                En ocasiones, el metraje de vídeo incluye saltos espurios y movimientos de inclinación, como por ejemplo cuando se utiliza una cámara portátil. Basándose en algunos elementos de la imagen rastreados, la Estabilización 2D puede detectar y compensar dichos movimientos para mejorar la calidad del resultado final.      
+              </p>
+              <h4>Fuente: <a href="https://docs.blender.org/manual/es/4.2/movie_clip/tracking/index.html"><i>https://docs.blender.org/manual/es/4.2/movie_clip/tracking/index.html</i></a> </h4>
+              <br>      
+              <!--
+              </section>
+                  <section id="post-06">
+                      <h3>Sesión 06</h3>
+                      
+                      <ul> 
+                          <li><a href="https://sketchfab.com/3d-models/bubble-ship-oblivion-c1e71fbff8b346d48f7f16f6f30dc11e" target="_blank" rel="noopener noreferrer">Bubble Ship (Oblivion)</a></li>
+                          <li><a href="https://www.tflex.com/gallery/contestprojects/bubble-ship-aircraft/" target="_blank" rel="noopener noreferrer">Sitio con vistas mecánicas</a></li>                       
+                          <li><a href="https://docs.blender.org/manual/en/latest/render/cameras.html#depth-of-field" target="_blank" rel="noopener noreferrer"></a>Profundidad de campo </li>
+                          <li><a href="https://uvmonline.blackboard.com/webapps/login/" target="_blank" rel="noopener noreferrer">Blackboard Actividad 3</a></li>
+                      </ul>
+                      
+                  </section>
+                  <section id="post-07">
+                      <h3>Sesión 07 Primer Parcial</h3>
+                      
+                      <ul>                        
+                          <li>Examen</a></li>
+                      </ul>
+                      
+                          <!--Plantilla Enlaces video
+                          <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
+                          
+  
+                  </section>
+                  <section id="post-08">
+                      <h3>Sesión 08</h3>
+  <!--
+                      <ul> 
+                          <li>Calificaciones</li>
+                          <li>Retroalimentación</li>  
+                          <li>Youtube Studio</li>
+                          <li><a href="https://youtu.be/RD9NapbTeKs?si=XqPCreZqOzQwxCa-" target="_blank" rel="noopener noreferrer">TIE Fighter Sound Design By Ben Burtt - Star Wars Behind The Scenes</a></li>
+                          <li><a href="https://youtu.be/Kux_LvRl57U?si=EG88mStXdasI5xFG" target="_blank" rel="noopener noreferrer">Cómo hacer efectos de sonido para juegos</a></li> 
+                          <li><a href="https://youtu.be/UO3N_PRIgX0?si=PS6c0W51g_JgNHs1">La magia de hacer sonido</a></li>
+                          <li><a href="https://youtu.be/ydj3KNPjaQo?si=Zz24xiksf8s8mFf1" target="_blank" rel="noopener noreferrer">Audacity creando efectos de sonido</a></li>
+                          <li><a href="https://youtu.be/ncOGJmCY6kY?si=siLQvnzCsAMqCISd" target="_blank" rel="noopener noreferrer">¿ Cómo crear el sonido de un Jet Engine con LMMS ? gratis</a>   
+                          </li>                  
+                          <li><a href="https://www.jamendo.com/start" target="_blank" rel="noopener noreferrer">Jamendo</a></li>
+                          <li><a href="https://youtu.be/8-XadrB0mUA" target="_blank" rel="noopener noreferrer">Usando Audacity y LMMS para efectos de audio</a></li>
+                          <li><a href="https://youtu.be/oC3gXr1s_aU?si=Nocu3P0kDbT_q9TM" target="_blank" rel="noopener noreferrer">Guía de edición de vídeo para principantes</a></li>
+  
+                          <p>De Blackboard</p>
+  
+                          <li>📹<a href="https://youtu.be/wCEXNn2SPLc" target="_blank" rel="noopener noreferrer"> Propiedades de las capas | After Effects – Tutorial</a></li>
+                          <li>📹<a href="https://www.youtube.com/watch?v=_D74-IQ-5cQ" target="_blank" rel="noopener noreferrer"> 01/20 Capas 3D — Motion Graphics: After Effects desde cero II_ESP </a></li>
+                          <li>📹<a href="https://www.youtube.com/watch?v=7_JiA-eRoU4" target="_blank" rel="noopener noreferrer"> 06/20 Ejercicio sobre las capas 3D — Motion Graphics: After Effects desde cero II_ESP</a></li>
+                          <li>📹<a href="https://www.youtube.com/watch?v=UA7zNQFkbWY" target="_blank" rel="noopener noreferrer"> ASISTENTE de FOTOGRAMAS CLAVE (KEYFRAMES) en After Effects 💥</a></li>
+  
+                          <li><a href="https://uvmonline.blackboard.com/webapps/login/" target="_blank" rel="noopener noreferrer">Blackboard Actividad 4</a></li>
+                      </ul>
+                      
+                  </section>
+                  <section id="post-09">
+                      <h3>Sesión 09</h3>
+                      
+                      <ul> 
+                        <li>Ac-02 Animación Bruja</li>                        
+                        <li><a href="https://uvmonline.blackboard.com/webapps/login/">Blackboard Actividad 5</a></li>
+                        
+                        <p>De Blackboard</p>
+  
+                        <li>📹<a href="hhttps://www.youtube.com/watch?v=Grx0hb-g1pw" target="_blank" rel="noopener noreferrer"> Animación Flat Design After Effects Tutorial</a></li>
+                        <li>📹<a href="https://www.youtube.com/watch?v=JsyRVmeH-f0" target="_blank" rel="noopener noreferrer"> Animacion Flat Design en After Effects | Tutorial After effects cc 2020</a></li>
+                        <li>📹<a href="https://www.youtube.com/watch?v=ZvCVheVR3bg" target="_blank" rel="noopener noreferrer"> Animar un personaje y escena de manera sencilla en After Effects / Puppet Pin, Layers 3d, Cámara</a></li>
+                        <li>📹<a href="https://youtu.be/Ztwm0OTPqyI" target="_blank" rel="noopener noreferrer"> How to Make 5 SIMPLE Animations in AFTER EFFECTS CC</a></li>
+                        <li>📹<a href="https://www.youtube.com/watch?v=vRRt5Y8SVmo" target="_blank" rel="noopener noreferrer"> Como Animar un logo Minimalista After Effects Tutoria</a> </li>
+                        <li>📹<a href="https://www.youtube.com/watch?v=84SVluRMB10&t=3s" target="_blank" rel="noopener noreferrer"> Capa 3D | After Effects – Tutorial</a> </li>
+                      </ul>
+                      
+                  </section>
+                  <section id="post-10">
+                      <h3>Sesión 10</h3>
+                      <!--
+                      <ul>
+                          <li><a href="https://youtu.be/8-XadrB0mUA?si=XMWcJKniiRNbAnw9" target="_blank" rel="noopener noreferrer">Generación de audio con LMMS y Audacity</a></li> 
+                          <li><a href="https://www.youtube.com/watch?v=uW-9-7bSP98" target="_blank" rel="noopener noreferrer">Mixamo - Como unir varias animaciones de Mixamo en Blender con el editor NLA</a></li>                       
+                          <li><a href="https://uvmonline.blackboard.com/webapps/login/">Blackboard Actividad 5</a></li>
+                      </ul>
+                      
+                  </section>
+                  <section id="post-11">
+                      <h3>Sesión 11</h3>
+                      
+                      <ul>
+                          <li><a href="https://beztao01.github.io/efectos-visuales/html/assets/rain.pdf" target="_blank" rel="noopener noreferrer">Add rain to video </a></li>                        
+                          <li><a href="https://myuvmedu.sharepoint.com/:f:/s/Section_N224L685202480991/Ev_Qi1rpYahDkprs-d5o8WQBuufd4q_2RIDUekDi29sy2A?e=qVAu3G" target="_blank" rel="noopener noreferrer">video recurso</a></li>
+                          
+                          <li><a href="https://youtu.be/1SM5-gfSuX0?si=l-I01nNvnzKzUV8h" target="_blank" rel="noopener noreferrer">Video</a></li>
+                          <li><a href="./html/thriller.html" target="_blank" rel="noopener noreferrer">Apuntes de Thriller</a></li>
+                      
+                          
+                          <li><a href="https://uvmonline.blackboard.com/webapps/login/">Blackboard Actividad 6</a></li>
+                      </ul>
+                      
+                  </section >
+                  <section id="post-12">
+                      <h3>Sesión 12</h3>
+                      
+                      <ul>                        
+                          <li><a href="https://uvmonline.blackboard.com/webapps/login/">Blackboard Actividad 6</a></li>
+                      </ul>
+
+                  </section>
+                  <section id="post-13">
+                      <h3>Sesión 13 Segundo Parcial</h3>
+                      <
+                      <ul>                        
+                          <li>Examen</li>
+                      </ul>
+                      
+                  </section>
+                  <section id="post-14">
+                      <h3>Sesión 14</h3>
+                      
+                      <ul>
+                          <li>Calificaciones</li>
+                          <li>Retroalimentación</li>
+                          <li>Actas</li>
+                          <li><a href="https://youtu.be/Vud9Ora9IwE?si=FCsoaz_ayNDIQc2m" target="_blank" rel="noopener noreferrer">Make your animation 10x better with LAYERS - Blender tutorial</a></li>                        
+                          <li><a href="https://uvmonline.blackboard.com/webapps/login/" target="_blank" rel="noopener noreferrer">Blackboard Actividad 7</a></li>
+                      </ul>
+                      
+                  </section>
+                  <section id="post-15">
+                      <h3>Sesión 15</h3>
+                      
+                      <ul>
+                          <li>🔗<a href="https://fotografiaecommerce.com/blog/imagotipo-logotipo-isologo-isotipo/" target="_blank" rel="noopener noreferrer">Diferencias entre Imagotipo, logotipo, isologo o isotipo</a></li>                        
+                          <li>💻<a href="https://uvmonline.blackboard.com/webapps/login/" target="_blank" rel="noopener noreferrer">Blackboard Actividad 7</a></li>
+                      </ul>
+                    
+                  </section>
+                  <section id="post-16">
+                      <h3>Sesión 16</h3>
+                      
+                      <ul>                        
+                          <li><a href="https://uvmonline.blackboard.com/webapps/login/" target="_blank" rel="noopener noreferrer">Blackboard Actividad 8</a></li>
+  
+                          <p>De Blackboard</p>
+  
+                          <li>📹<a href="https://www.youtube.com/watch?v=YmxlNbzu_Yc" target="_blank" rel="noopener noreferrer">Como Crear un Canal de Youtube 2021</a></li>
+                          <li>📹<a href="https://www.youtube.com/watch?v=k3pL3z8ndnE" target="_blank" rel="noopener noreferrer">Cómo Crear una Cuenta o un Canal en Vimeo Gratis - Paso a Paso</a></li>
+  
+                      </ul>
+                    
+                  </section>
+                  <section id="post-17">
+                      <h3>Sesión 17</h3>
+                      
+                      <ul>                        
+                          <li><a href="https://uvmonline.blackboard.com/webapps/login/" target="_blank" rel="noopener noreferrer">Blackboard Actividad 8</a></li>
+                      </ul>
+                      
+                  </section>
+                  <section id="post-18">
+                      <h3>Sesión 18</h3>
+                      
+                      <ul>                        
+                          <li><a href="https://uvmonline.blackboard.com/webapps/login/" target="_blank" rel="noopener noreferrer">Blackboard Actividad 8</a></li>
+                      </ul>
+                      
+                  </section>
+                  <section id="post-19">
+                      <h3>Sesión 19 Tercer Parcial</h3>
+                      
+                      <ul>                        
+                          <li>Examen</li>
+                          <li><a href="./html/multimedios.html" target="_blank" rel="noopener noreferrer">Multimedios</a></li>
+                      </ul>
+                      
+                  </section>
+                  <section id="post-20">
+                      <h3>Sesión 20</h3>
+                      
+                      <p>Retroalimentación</p>
+                      -->
+                  </section>
+  
+              </main>
+  </div>
+  <footer>
+      <img class="logo" src="../assets/g1.svg" alt="" srcset="">
+  </footer>
+  <script src="./js/main.js"></script>   
+</body>
+</html>

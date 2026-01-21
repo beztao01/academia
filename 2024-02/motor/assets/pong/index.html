@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="shortcut icon" href="../dienvi.png" type="image/x-icon">
+
+		<title>Práctica 01 | Cubo en ThreeJS</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><h1>PingPong en Unreal</h1></section>
+				<section><h2>Configuración</h2>New  </section>
+				<section>seccion games >> blank >> Blueprint >> pingPong </section>
+				<section>File  >> New Level  >> Basic >> Create</section>
+				<section>movimientos de mouse >> LMB rotacion >> MMB zoom  MMB apretado panear</section>
+				<section>botón Quick add to the proyect >> Place Actors Panel >> en el search tipeamos Camera Actor y la posicionamos  </section>
+				<section>details con E  rotamos -90 en Y</section>
+				<section>con W + shift  movemos la cámara que sea vea una reticula de 14 cuadros aprox.</section>
+				<section>En el place actor seleccionamos el boton de Shapes lo posicionamos del centro hacia la derecha de la cámara</section>
+				<section>Escalamos el cubo en 0.2 en x</section>
+				<section>Movemos sobre el eje de x tratando de ponerlo en el centro</section>
+				<section>Escalamos en Y a 14 para tener nuestra primera pared</section>
+				<section>Con alt duplicamos y depués cpn shift movemos la vista</section>
+				<section>Abrimos el Content Drawer el botón esta abajo del lado izquierdo</section>
+				<section>en content a lado de la folder Start Content con boton derecho le damos click a Blueprint Class >> Game Mode Base lo llamamos pong_GM</section>
+				<section>le damos doble click, lo arrastros del nombre y lo colocamos a lado del untitled</section>
+				<section>Creamos otro Blueprint, ahora de tipo Character y lo llamamos playerPaddle</section>
+				<section>le damos doble click, lo arrastros del nombre y lo colocamos a lado del pong_GM</section>
+				<section>Creamos otro Blueprint, ahora de tipo Player Controler y lo llamanos pongController</section>
+				<section>Seleccionamos el pong_GM y le damos click a la pestaña EventGraph</section>
+				<section>le damos a file >> save all >> pongLevel CTRL + Shift + S</section>
+
+
+
+				
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

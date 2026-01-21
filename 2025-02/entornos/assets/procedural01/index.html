@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="shortcut icon" href="../dienvi.png" type="image/x-icon">
+
+		<title>Textura Procedural 01</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+			 <section>
+			 	<h2>Textura Procedutal</h2>
+			 <p>Objetivo: Desarrollar texturas propias </p>
+			 </section>
+
+				<section>Descarga el archivo base de Blender <a href="https://myuvmedu.sharepoint.com/:u:/s/Section_N225L685202580546/ERtjudph9TdIuPIG2hKR7YwBbp0iAsZ-PEhxnOWbErRf_g?e=fJZhKp" target="_blank" rel="noopener noreferrer">Aquí.</a></section>
+
+								<section>
+					<h4>Archivo Base</h4>
+					<p>Empezamos así</p>
+					<img src="./assets/01Base.png" alt="">
+				</section>
+
+				<section>
+					<h4>Primer caso de textura</h4>
+					<p>Agregamos un voronoi texture, conectando el Distance con el Base Color</p>
+					<img src="./assets/02Distance.png" alt="">
+				</section>
+				
+				<section>
+					<picture>
+						<p>Agregamos un ColorRamp </p>
+						<img src="./assets/03ColorRamp.png" alt="" srcset="">
+					</picture> 
+				</section>
+
+				<section>
+					<picture>
+						<p>Agregamos un Bump </p>
+						<img src="./assets/04Bump.png" alt="" srcset="">
+					</picture> 
+				</section>
+
+				<section>
+					<p>Resultado</p>
+					<picture>
+						<img src="./assets/05Render.png" alt="" srcset="">
+					</picture>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
