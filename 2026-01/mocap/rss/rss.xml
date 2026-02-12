@@ -1,0 +1,26 @@
+<?xml verion="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Laboratorio de captura de movimiento| Sesión 01</title>
+    <link>../index.html</link>
+    <description>Bienvenidos a nuestra materia de Captura de movimiento.</description>
+    <pubDate>Mon, 02 Jan 2026 10:00:00 GMT</pubDate>
+    <item>
+      <title>New Motion Capture Technology Released</title>
+      <link>http://www.example.com/mocap/new-technology</link>
+      <description>A new motion capture system has been released, offering improved accuracy and ease of use.</description>
+      <pubDate>Mon, 01 Jan 2026 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Motion Capture in Film Industry</title>
+      <link>http://www.example.com/mocap/film-industry</link>
+      <description>Discover how motion capture is revolutionizing the film industry with realistic character animations.</description>
+      <pubDate>Tue, 15 Jan 2026 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Motion Capture Workshops Announced</title>
+      <link>http://www.example.com/mocap/workshops</link>
+      <description>Join our upcoming workshops to learn about the latest techniques in motion capture.</description>
+      <pubDate>Wed, 20 Jan 2026 14:00:00 GMT</pubDate>
+    </item>
+  </channel>
