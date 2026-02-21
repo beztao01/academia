@@ -7,12 +7,13 @@
 body{
     background-color:#0a4a86;
     /*background-color:#f3f6f4;*/
-font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .grid-container{
     display: grid;
     grid-template-columns: auto auto auto;
+    flex: 1; 
 }
 
 header{
@@ -52,7 +53,6 @@ main section ul{
 }
 
 main section ul li{
-   
     padding: 3px;
     margin: 0px;
     text-align: left;
@@ -92,16 +92,15 @@ footer{
     height: 100px;
     background-color:#073763;
     color: #f3f6f4;
+    flex-shrink: 0;
 }
-
-
 
 .logo{
     margin: 10px;
 }
 
-@media screen and (max-width: 500px) {nav{
+@media screen and (max-width: 500px) {nav
+    {
     display: none;
-}
-    
+    }
 }
