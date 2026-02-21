@@ -3,6 +3,11 @@
   <channel>
     <title>Laboratorio de captura de movimiento| Sesión 01</title>
     <link>https://beztao01.github.io/academia/2026-01/mocap/html/sesion01</link>
+    <image>
+        <url>https://tusitio.com/favicon.png</url>
+        
+        <link>https://tusitio.com</link>
+    </image>
     <description>Sesion 01</description>
     <pubDate>Mon, 02 Jan 2026 10:00:00 GMT</pubDate>
   </channel>
