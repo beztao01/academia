@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webcam Mirror Half</title>
+    <style>
+        video, canvas { border: 2px solid #333; border-radius: 8px; margin: 10px; }
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h3>Espejo a Mitad de Imagen</h3>
+    <video id="video" width="1920" height="1080" autoplay></video>
+    <button id="snap">Capturar Foto</button>
+    <canvas id="canvas" width="1920" height="1080"></canvas>
+
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+
+        // Acceder a la cámara
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => { video.srcObject = stream; })
+            .catch(err => console.error("Error al acceder a la webcam:", err));
+
+        document.getElementById('snap').addEventListener('click', () => {
+            const w = canvas.width;
+            const h = canvas.height;
+
+            // 1. Dibujar la mitad izquierda original
+            context.drawImage(video, 0, 0, w / 2, h, 0, 0, w / 2, h);
+
+            // 2. Dibujar la mitad derecha invertida (el efecto espejo)
+            context.save(); // Guardar estado
+            context.scale(-1, 1); // Invertir horizontalmente
+            // Dibujamos la parte izquierda del video en el lado derecho del canvas
+            // El destino en X es -w porque escalamos a -1
+            context.drawImage(video, 0, 0, w / 2, h, -w, 0, w / 2, h);
+            context.restore(); // Restaurar estado
+        });
+    </script>
+</body>
+</html>

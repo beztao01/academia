@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- HTML -->
+<video id="webcam" autoplay playsinline width="640" height="480"></video>
+
+<script>
+  // Selección del elemento de video
+  const video = document.getElementById('webcam');
+
+  // Función para activar la cámara
+  async function activarCamara() {
+    try {
+      // Solicita acceso solo al video
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      
+      // Asigna el flujo de la cámara al elemento de video
+      video.srcObject = stream;
+    } catch (error) {
+      console.error("Error al acceder a la cámara web:", error);
+    }
+  }
+
+  // Ejecuta la función
+  activarCamara();
+</script>
+
+</body>
+</html>
