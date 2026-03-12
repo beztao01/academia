@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entidades</title>
+</head>
+<body>
+    <p>En Unreal Engine, los conceptos de "entidades" y "comportamientos" se refieren a la arquitectura fundamental que permite crear objetos en un mundo virtual y definir cómo actúan. Aunque tradicionalmente Unreal se basa en Actores, recientemente ha introducido sistemas de Entidades más avanzados para manejar grandes cantidades de objetos. 
+Epic Games Developers
+Epic Games Developers
+ +3
+1. Las Entidades (Actores y Mass Entities)
+Representan cualquier objeto que "existe" dentro del nivel de un juego. 
+YouTube
+YouTube
+Actores (Actors): Es el tipo de objeto base más común. Un Actor puede ser un personaje, una luz, un árbol o incluso una cámara. Se pueden colocar en el nivel y son "contenedores" de componentes.
+Componentes: Son las piezas que definen la apariencia y funcionalidad de una entidad (por ejemplo, una malla 3D para el aspecto físico o una luz para iluminar).
+Mass Entity: Es una tecnología moderna para simulaciones de alta densidad (como multitudes en una ciudad). A diferencia de los Actores tradicionales, las "entidades de masa" son mucho más ligeras y eficientes para procesar miles de objetos a la vez. 
+Epic Games Developers
+Epic Games Developers
+ +4
+2. Los Comportamientos (Lógica y Reacción)
+Definen qué hace una entidad bajo ciertas condiciones o estímulos. 
+Epic Games Developers
+Epic Games Developers
+ +1
+Blueprints: Es el sistema de programación visual de Unreal. Permite definir comportamientos complejos (como abrir una puerta al acercarse) conectando nodos sin necesidad de escribir código.
+Behavior Trees (Árboles de Comportamiento): Se utilizan específicamente para la Inteligencia Artificial (IA). Permiten que los personajes tomen decisiones lógicas, como patrullar, perseguir a un jugador o huir si tienen poca vida.
+Blackboards (Pizarras): Funcionan junto a los Behavior Trees como la "memoria" de la entidad, almacenando datos clave (como la última posición conocida del jugador) para que la IA sepa cómo actuar.
+C++: Para comportamientos que requieren un rendimiento extremo o sistemas de bajo nivel, se utiliza programación directa en C++. 
+YouTube
+YouTube
+ +6
+En resumen, una entidad es el "quién" (un objeto en el mundo) y el comportamiento es el "qué hace" (su lógica de reacción e interacción). 
+UT-HUB
+UT-HUB
+ +1
+¿Te gustaría saber cómo configurar un Behavior Tree básico para un enemigo o prefieres profundizar en el sistema de Blueprints?
+
+
+</p>
+</body>
+</html>
