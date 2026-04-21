@@ -8,8 +8,10 @@
 </head>
 <body>
  <div class="container">
-  <p>
-    Configuración de colisiones con mallas estáticas
+  
+    <h2>Configuración de colisiones con mallas estáticas</h2>
+
+<p>
   Cómo configurar la detección de colisiones
  </p>
 
@@ -17,8 +19,8 @@
 
   En UE4, puedes hacer que las mallas estáticas realicen diversas acciones, como cambiar su textura o material durante el juego, o moverse por el nivel mediante un Matinee. Lo más probable es que, independientemente de la función que le asignes a tu malla estática, no quieras que el jugador pueda atravesarla caminando o disparando. Ahí es donde resulta útil configurar la colisión en tu malla estática.
   </p>
-
-  Configuración
+  <h2>Configuración</h2>
+  
   <p>
   Es posible que ya tengas un nivel y mallas estáticas con las que trabajar. Si es así, puedes saltarte este paso. Si no, abre UE4 y crea un nuevo proyecto. Asígnale un nombre y elige una ubicación para guardarlo. En este ejemplo, usaremos la plantilla Blueprint First Person. No es necesario que trabajes con esta plantilla, pero la capacidad de disparar proyectiles, que ya está implementada en ella, se utilizará más adelante para ilustrar un punto, así que usar esta plantilla puede ayudarte a seguir el tutorial.
   </p>
@@ -27,11 +29,28 @@
   Asegúrate también de activar la opción "Con contenido de inicio" . Si no lo haces, no tendrás los recursos con los que trabajaremos más adelante en este tutorial, lo que podría dificultar el seguimiento.
   </p>
 
+  <picture>
+    <img src="https://d1iv7db44yhgxn.cloudfront.net/documentation/images/e357fe9d-e4aa-4ef6-86e7-2da3defba90e/newprojectwithstartercontent.png" class="img-fluid img-thumbnail" alt="...">
+  </picture>
+
+
+  <h2>Colisión en una malla de forma simple</h2>
   <p>
-  Colisión en una malla de forma simple
   Una vez abierto el proyecto, si habilitaste la opción "Con contenido de inicio" , deberías tener una carpeta en tu Explorador de contenido llamada " Contenido de inicio" . Dentro de esa carpeta debería haber otra carpeta llamada " Propiedades" . Navega hasta esa carpeta y encuentra la malla estática llamada SM_Door .
   </p>
  
+    <picture>
+      <img src="https://d1iv7db44yhgxn.cloudfront.net/documentation/images/98853568-3d2a-4f1a-a956-15df2783f6d9/contentbrowserwithstartercontent.png" alt="...">
+    </picture>
+   <picture>
+    <img src="https://d1iv7db44yhgxn.cloudfront.net/documentation/images/9afea615-293e-4091-8100-3a1e97fe398b/doorincontentbrowser.png" alt="...">
+  </picture>
+  <p>
+    Una vez que hayas encontrado SM_Door , abre el Editor de malla estática haciendo doble clic en el recurso o haciendo clic con el botón derecho y seleccionando Editar en el menú contextual. Una vez abierto el editor, deberías ver algo similar a lo que se muestra a continuación:
+  </p>
+     <picture>
+    <img src="https://d1iv7db44yhgxn.cloudfront.net/documentation/images/7e7435b1-5074-4924-b688-9211dcc5f7c1/defaultdoor.png" alt="...">
+  </picture>
   <p>
   Por defecto, esta malla no tiene colisión configurada. Sin colisión, el jugador podría atravesarla y, si la malla simula física, simplemente caería al vacío al comenzar el juego. Puedes probarlo colocando esta malla en tu nivel antes de configurar la colisión y jugando. Observa que el jugador puede atravesar la malla sólida. Además, si quieres que la puerta salga volando al dispararle, o que empiece en el cielo y caiga al suelo, tendrás que activar la opción " Simular física " en el panel de detalles , lo cual no es posible por defecto si la malla estática no tiene colisión.
   </p>
