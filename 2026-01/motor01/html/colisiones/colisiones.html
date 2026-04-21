@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colisiones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+ <div class="container">
+  <p>
+    Configuración de colisiones con mallas estáticas
+  Cómo configurar la detección de colisiones
+ </p>
+
+  <p>
+
+  En UE4, puedes hacer que las mallas estáticas realicen diversas acciones, como cambiar su textura o material durante el juego, o moverse por el nivel mediante un Matinee. Lo más probable es que, independientemente de la función que le asignes a tu malla estática, no quieras que el jugador pueda atravesarla caminando o disparando. Ahí es donde resulta útil configurar la colisión en tu malla estática.
+  </p>
+
+  Configuración
+  <p>
+  Es posible que ya tengas un nivel y mallas estáticas con las que trabajar. Si es así, puedes saltarte este paso. Si no, abre UE4 y crea un nuevo proyecto. Asígnale un nombre y elige una ubicación para guardarlo. En este ejemplo, usaremos la plantilla Blueprint First Person. No es necesario que trabajes con esta plantilla, pero la capacidad de disparar proyectiles, que ya está implementada en ella, se utilizará más adelante para ilustrar un punto, así que usar esta plantilla puede ayudarte a seguir el tutorial.
+  </p>
+
+  <p>
+  Asegúrate también de activar la opción "Con contenido de inicio" . Si no lo haces, no tendrás los recursos con los que trabajaremos más adelante en este tutorial, lo que podría dificultar el seguimiento.
+  </p>
+
+  <p>
+  Colisión en una malla de forma simple
+  Una vez abierto el proyecto, si habilitaste la opción "Con contenido de inicio" , deberías tener una carpeta en tu Explorador de contenido llamada " Contenido de inicio" . Dentro de esa carpeta debería haber otra carpeta llamada " Propiedades" . Navega hasta esa carpeta y encuentra la malla estática llamada SM_Door .
+  </p>
+ 
+  <p>
+  Por defecto, esta malla no tiene colisión configurada. Sin colisión, el jugador podría atravesarla y, si la malla simula física, simplemente caería al vacío al comenzar el juego. Puedes probarlo colocando esta malla en tu nivel antes de configurar la colisión y jugando. Observa que el jugador puede atravesar la malla sólida. Además, si quieres que la puerta salga volando al dispararle, o que empiece en el cielo y caiga al suelo, tendrás que activar la opción " Simular física " en el panel de detalles , lo cual no es posible por defecto si la malla estática no tiene colisión.
+  </p>
+  <p>
+  Estos efectos son indeseables en la mayoría de los casos, así que procederemos a configurar la colisión para esta malla. En la parte superior del editor, hay un menú desplegable de Colisión . Si haces clic en él, verás las opciones necesarias para añadir colisión a tu malla.
+  </p>
+  <p></p>
+  En este caso, nuestra malla tiene una forma bastante simple. Esto facilitará la configuración de la colisión. Las tres primeras opciones del menú Colisión rodearán nuestra malla con una forma simple que delimitará lo que puede y no puede bloquearse o superponerse con ella. A continuación, se muestran ejemplos de la malla con estas formas simples de colisión.
+  </p>
+ 	 	 
+		
+  <p> 		
+  Colisión simplificada de esferas	Colisión simplificada con cápsula	Colisión simplificada de cajas
+  Después de configurar la colisión, si aún no puede ver el contorno alrededor de su malla, asegúrese de que el botón de colisión en la barra de herramientas, ( ) esté resaltado. Tenga en cuenta también que si ya tiene una colisión simplificada en una malla y agrega otra colisión simplificada a la misma, la nueva colisión no reemplazará a la anterior, sino que se agregará a ella. Si agrega las tres colisiones simplificadas mencionadas anteriormente sin eliminar primero ninguna de ellas, podría obtener algo similar a esto.
+  </p>
+  <p>  
+  Para solucionar esto, puedes seleccionar una de las colisiones y pulsar la tecla Suprimir , o seleccionar Eliminar colisión seleccionada en el menú desplegable Colisión para eliminarlas una a una. También puedes seleccionar Eliminar colisión en el menú Colisión para eliminar todas las colisiones de la malla. Aparecerá una ventana emergente preguntándote si estás seguro de que quieres eliminar todas las mallas de colisión. Si haces clic en Sí, se eliminará la colisión de tu malla estática.
+  </p>
+ 
+  <p>
+  Tras aplicar la colisión a la malla, observa que esta tiene un widget de traslación. Una vez configurada la colisión, puedes trasladar, rotar y escalar las mallas de colisión como lo harías con cualquier otro objeto en UE4.
+  </p>
+  <p>
+  Colisión en una malla más compleja
+  Si tienes una malla que se ajusta fácilmente a una cápsula o caja, o si la precisión de la colisión no es crucial, la colisión simple que configuramos en la sección anterior funcionará correctamente. Sin embargo, es posible que tengas una malla con una forma más compleja que aún requiera una colisión precisa. En esta sección, explicaremos cómo configurarla.
+  </p>
+  <p>
+  De vuelta en la carpeta Props dentro del Contenido inicial , busca la malla estática SM_Chair . Haz doble clic en la miniatura para abrirla en el Editor de mallas estáticas. Como puedes ver, esta malla ya tiene colisión y debería verse similar a lo que se muestra a continuación:
+  </p>
+  <p>
+  Elimina la colisión de la malla seleccionando «Eliminar colisión» en el menú desplegable «Colisión » situado en la parte superior del editor. Podemos intentar usar las formas primitivas que utilizamos en la sección anterior de este tutorial, pero como se puede apreciar en las imágenes siguientes, ninguna se ajusta del todo a lo que buscamos.
+  </p>
+ 	 	 
+  <p>		
+  Colisión simplificada de esferas	Colisión simplificada con cápsula	Colisión simplificada de cajas
+  Parece que ninguna de las formas primitivas logra exactamente lo que buscamos. Sin embargo, podemos acercarnos más con las otras opciones del menú desplegable Colisión . Estas opciones se denominan generadores de colisión simples K-DOP . K-DOP es un tipo de volumen delimitador, que significa K politopo orientado discreto (donde K es el número de planos alineados con los ejes). Básicamente, toma K planos alineados con los ejes y los empuja lo más cerca posible de la malla. La forma resultante se utiliza como envolvente de colisión. En el Editor de malla estática, K puede ser:
+  </p>
+  <p>
+  10 - Caja con 4 bordes biselados: puede elegir bordes alineados en los ejes X, Y o Z.<br>
+  18 - Caja con todos los bordes biselados.<br>
+  26 - Caja con todos los bordes y esquinas biselados.<br>
+  Así es como luce la malla de nuestra silla con 10, 18 y 26 grados de libertad (DOP) respectivamente.<br>
+  </p>
+ 	 	 
+  <p>	
+  10DOP	18DOP	26DOP
+  Estas mallas de colisión se acercan más a lo que buscamos, pero aún queda un espacio entre los cojines que podría impedir que el jugador se siente en la silla. Seleccione Eliminar colisión una vez más y, una vez hecho esto, seleccione Colisión convexa automática en el menú desplegable Colisión . Al hacerlo, se le mostrará el panel Descomposición convexa , similar al que se muestra a continuación.
+  </p>	
+  <p>
+  La primera opción de esta ventana es Precisión, que generará la menor cantidad posible de primitivas para representar la malla de colisión. La última opción, Vértices máximos de la carcasa , aumentará o disminuirá la cantidad de vértices de la malla de colisión. Cuanto mayores sean estos valores, más precisa será la colisión, pero también más compleja será la malla. Al hacer clic en Aplicar, se aplicarán estos ajustes a la malla.
+  </p>
+ 	 
+  <p>
+  Configuración predeterminada	Máxima precisión y máximos vértices del casco
+  Otra forma sencilla de configurar colisiones complejas es utilizando varias mallas de colisión simples para crear la colisión de tu malla. Como recordarás de este tutorial, crear otra malla de colisión simple no reemplaza la original, sino que la complementa. También vimos que cada malla de colisión tiene su propio widget de transformación, lo que permite trasladar, rotar y escalar cada malla de colisión individualmente. Podemos usar esto para crear colisiones para nuestra malla estática.
+  </p>	
+  <p>
+  Comience seleccionando «Agregar colisión simplificada de caja» en el menú desplegable «Colisión» . Haga clic izquierdo en la malla de colisión para abrir su widget de transformación. Traslade, rote y escale la malla de colisión para que se ajuste al brazo de la silla hasta el suelo. Con la malla de colisión aún seleccionada, duplíquela seleccionando «Duplicar colisión seleccionada» en el menú desplegable «Colisión» o pulsando Ctrl + W. Mueva esta malla de colisión para que se ajuste al otro brazo de la silla. Duplique la malla de nuevo. Con esta nueva malla seleccionada, muévala, escálela y rote para que se ajuste a la parte inferior de la silla. Duplique esa malla de colisión y muévala hacia arriba para que se ajuste al asiento de la silla. Duplique la malla una vez más y rote para que se ajuste al respaldo de la silla. Cuando termine, debería tener algo similar a esto:
+  </p>
+  <p>
+  Podrías volver atrás y seguir la forma de la silla con más precisión, pero para los fines de este ejemplo, usando solo estas cinco cajas hemos configurado la colisión en toda la silla y la hemos configurado de manera que el jugador pueda sentarse en el cojín.
+  </p>
+  <p>
+  Simulación de física y ajustes preestablecidos de colisión
+  Ahora que tu malla estática tiene colisión, puede simular física. Guarda la malla de tu silla haciendo clic en el botón Guardar en el extremo izquierdo de la barra de herramientas dentro del Editor de malla estática y luego busca SM_Chair en tu Explorador de contenido . Arrastra una copia de la malla al nivel y, con ella seleccionada, observa el panel Detalles . En la sección Física del panel Detalles , la primera opción es Simular física y debería estar desactivada por defecto. Si juegas el nivel ahora con Simular física desactivada , tu personaje no podrá atravesar la malla y los proyectiles disparados no la afectarán en absoluto.
+  </p>
+  <p>
+  Deja de jugar el nivel y activa la opción Simular física . Ahora, al jugar, notarás que cuando tu personaje camina hacia la silla, la malla se mueve. Además, la malla sale disparada por el nivel y hacia los aires cuando le disparas. Esto se debe no solo a que la malla está simulando la física, sino también a que su configuración predeterminada de colisión es bloquear todas las colisiones .
+  </p>
+  <p>
+  Vuelve al panel Detalles de la silla y, en la sección Colisión , encontrarás un menú desplegable llamado Preajustes de colisión . La forma en que esta instancia de la malla reacciona a otros objetos del mundo depende de sus Preajustes de colisión . Revisa las opciones disponibles, que se muestran a continuación.
+  </p>
+  <p>
+  Está configurado en Bloquear todo por defecto. Si lo cambias a Superponer todo, en cuanto empiece el juego, verás cómo la malla atraviesa el nivel. También hay un preajuste personalizado que te permite configurar manualmente cómo responde la malla a los diferentes objetos del nivel. Puedes bloquear a los Pawns, superponer los Proyectiles e ignorar todo lo demás. En el preajuste personalizado, puedes indicarle a la malla que haga eso. Ahora que has configurado la colisión en tu malla, ya puedes colocarla en tu nivel y usar su colisión para configurar cómo afecta y cómo puede ser afectada por otros objetos del nivel.
+  </p>
+  </p>
+  Al seleccionar un Actor de Malla Estática en el editor de niveles, o cualquier Componente de Malla Estática como los del Editor de Blueprints, el Panel de Detalles -> Categoría de Colisión -> Preajustes de Colisión mostrará Predeterminado . Esto indica que no se ha modificado el Preajuste de Colisión con respecto a su configuración inicial. Si aparece otra opción, como Bloquear Todo , significa que se ha modificado el Preajuste de Colisión del Actor/Componente de Malla Estática seleccionado.
+  </p>
+     
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ </div>
+</body>
+</html>
