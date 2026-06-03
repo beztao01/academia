@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Física y simulación | ITIAD</title>
+</head>
+<body> 
+  <div class="container mt-5">
+    <h1>Líquidos en blender</h1>
+
+    <h2>¿Cómo hacer líquidos rapido en blender?</h2>
+
+    <p>  La forma más rápida de hacer líquidos en Blender es utilizando la función automatizada Quick Liquid. Esta herramienta configura instantáneamente todo el sistema de físicas de fluidos (el dominio y el emisor) con un solo clic</p>
+
+    <p>.1. El truco rápido (Quick Liquid) Selecciona tu objeto: Agrega una esfera o cualquier figura que quieras transformar en agua (Shift + A > Mesh > UV Sphere).</p>
+    <p>Aplica el efecto: Ve al menú superior Object > Quick Effects > Quick Liquid.</p>
+    <p>Resultado: Blender creará automáticamente un cubo transparente a su alrededor (el Dominio) y configurará tu objeto como el emisor (Flow)</p>
+    <p>.2. Configuración esencial para ver el líquidoSi presionas barra espaciadora (Space) verás partículas flotando, pero para que parezca un líquido real necesitas activar la malla física:</p>
+
+    <p>Activa la malla: Selecciona el cubo grande del dominio, ve a la pestaña de Physics Properties (icono de física azul) en el panel derecho y marca la casilla Mesh.</p>
+
+    <p>Elige el flujo de trabajo:Para previsualizar en tiempo real mientras haces pruebas, ve a la sección Cache del dominio y cambia el tipo de Replay a Modular. Esto te permitirá procesar por separado. </p>
+
+    <p>  Presiona Bake Mesh para consolidar el agua visible si usas el modo modular </p> 
+
+    <p>.3. Ajustes para mejorar la velocidad y el aspectoLas simulaciones consumen muchos recursos de tu computadora. </p>
+
+    <p>Sigue estas pautas para optimizar el tiempo de trabajo:</p>
+
+    <p>Baja resolución para pruebas: Mantén el valor de Resolution Divisions bajo (entre 32 y 64) mientras diseñas la escena.</p> 
+
+    <p></p>Súbelo a 128 o más solo para el renderizado final.</p>
+
+    <p>Comportamiento del chorro: Si quieres que el objeto tire agua constantemente como un grifo,</p> 
+
+    <p>selecciona la esfera interior, ve a sus propiedades de física y cambia el Flow Behavior de Geometry a Inflow.</p>
+
+    <p>Material express de agua: Para que no se vea gris, crea un nuevo material para el dominio: sube la Transmission a 1.0, </p>
+
+    <p>baja el Roughness a 0.0 y pon el IOR en 1.333 (el índice de refracción real del agua).</p>
+
+    <p>Si te interesa, puedo explicarte cómo hacer que el líquido choque contra otros objetos (como un vaso o una taza) o enseñarte un truco para crear efecto de agua estática sin usar físicas para que tu PC no vaya lento. ¿Qué prefieres?</p>
+
+    <h6> <i>Pregúntandole a Gemini</i> </h6>
+    <h6> <i> Fuente: <a href="https://docs.blender.org/manual/en/4.5/physics/fluid/index.html">Fluid documentacion oficial</a></i> </h6>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </div>  
+</body>
+</html>
