@@ -1,0 +1,76 @@
+body{
+    background-color: #f3f2ef;
+    color: black;
+}
+
+.container-fluid{
+    background-color: white;
+
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+    border: 1px solid #bfbffb;
+    border-radius: 10px;
+}
+
+.container-fluid-dark{
+    background-color: #0a66c2ff;
+    color:white;
+
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+    border: 1px solid #bfbffb;
+    border-radius: 10px;
+}
+
+h2{
+    color: #0a66c2ff;
+    text-decoration-line: underline;
+    padding-bottom: 20px;
+}
+
+article{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5b5b5b;
+}
+
+img{
+   
+    border: 1px solid #bfbffb;
+    border-radius: 10px; 
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5b5b5b;
+}
+.card-footer {
+    background-color:#0a66c2ff);
+    color:white;/*no funciona en fuente*/
+}
+/* ver por que no funciona*/
+.text-muted {
+    background-color:#0a66c2ff);
+    color:white;
+}
+
+small {
+    color: white;
+}

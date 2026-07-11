@@ -1,0 +1,5 @@
+#Ignorar carpeta donde estan los archivos de Freecad
+Practicas
+
+#ignorar todos los archivos con extension txt
+*.txt
