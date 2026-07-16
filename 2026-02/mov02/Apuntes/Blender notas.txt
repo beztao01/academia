@@ -1,0 +1,22 @@
+Blender notas
+
+01 Descarga
+02 Configuracion y Preferencias de Usuario
+
+Curso esencial de Blender 4.2 LTS, splash screen
+
+METLIFE
+8396733 POLIZA
+SALF7007175F6 RFC
+004METD1G00083967332 REFERENCIA
+
+
+Publicar tu sitio web en github pages
+https://beztao01.github.io/academia/2025-01/estructura/_build/html/index.html
+https://beztao01.github.io/academia/2025-01/estructura/_build/html/index.html
+/2025-01/estructura/_build/html/index.html
+https://beztao01.github.io/academia/20-01/estructura/_build/html/sesiones/sesion01.html
+https://beztao01.github.io/academia/2025-01/antropo/build/html/index.html
+https://beztao01.github.io/academia/2025-01/estructura/build/html/index.html
+
+"F:\multimedia 2\01 uni\academia\firma.png"
